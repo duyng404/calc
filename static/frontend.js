@@ -8,7 +8,8 @@ $(function() {
 	// if browser doesn't support WebSocket, show notification
 
 	// open connection
-	var connection = new WebSocket('ws://138.236.26.111:8080/ws');
+	var hosturl = window.location.host;
+	var connection = new WebSocket('ws://'+hosturl+'/ws');
 	connection.onopen = function() {
 
 	}
