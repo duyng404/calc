@@ -1,11 +1,29 @@
 html
 	head
 		title live calc
+		link(rel='stylesheet', href='/style.css', type='text/css')
 	body
 		h1 live calculator
 		div#form
-			label(for='eq') Equation: 
 			input#eq(type='text' name='eq' placeholder='enter your equation here')
 			button#submit Calculate!
+		div#examples
+			div.ex
+				| Examples: 
+			div.ex
+				a(href='javascript:prefill("12+34")') 12+34
+			div.ex
+				a(href='javascript:prefill("1.2 * (2 + 4.5)")') 1.2 * (2 + 4.5)
+			div.ex
+				a(href='javascript:prefill("sin(45 deg) ^ 2")') sin(45 deg) ^ 2
+			div.ex
+				a(href='javascript:prefill("9 / 3 + 2i")') 9 / 3 + 2i
+			div.ex
+				a(href='javascript:prefill("12.7 cm to inch")') 12.7 cm to inch
+			div.ex
+				a(href='javascript:prefill("det([-1, 2; 3, 1])")') det([-1, 2; 3, 1])  
+		p#idd
+		h1 history
+		div#history
 		script(type='text/javascript' src='/node_modules/jquery/dist/jquery.min.js')
 		script(type='text/javascript' src='frontend.js')
