@@ -1,0 +1,11 @@
+html
+	head
+		title live calc
+	body
+		h1 live calculator
+		div#form
+			label(for='eq') Equation: 
+			input#eq(type='text' name='eq' placeholder='enter your equation here')
+			button#submit Calculate!
+		script(type='text/javascript' src='/node_modules/jquery/dist/jquery.min.js')
+		script(type='text/javascript' src='frontend.js')
